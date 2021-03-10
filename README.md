@@ -1,2 +1,2 @@
 # PythonProjects
-Learning python and its intricacies (or lackthereof)
+Learning python and its intricacies
