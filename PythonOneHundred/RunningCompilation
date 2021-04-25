@@ -4,14 +4,13 @@
 #Write your code below this line 👇
 name = input("What is your name? ")
 print(len(name))
+####################################
 
+####################################
 # 🚨 Don't change the code below 👇
 a = input("a: ")
 b = input("b: ")
 # 🚨 Don't change the code above 👆
-####################################
-
-####################################
 #Write your code below this line 👇
 
 temp = a;
@@ -40,10 +39,7 @@ print(f"The name of your band is: {userBandName}!");
 
 #5. Make sure the input cursor shows on a new line, see the example at:
 #   https://band-name-generator-end.appbrewery.repl.run/
-####################################
-####################################
-####################################
-
+##################################################################################################################################################################
 
 #Day 2 Code
 
@@ -108,9 +104,7 @@ eachPersonPays = (finalBill + tip) / 5
 print(f"The final bill was ${format(finalBill, ',.2f')}.\n")
 print(f"Tip was ${format(tip, ',.2f')}.\n")
 print(f"Each person owes ${format(eachPersonPays, ',.2f')}.\n")
-####################################
-####################################
-####################################
+##################################################################################################################################################################
 
 #Day 3 Code
 
@@ -303,9 +297,7 @@ if(gameOver == False):
   print("You made it to the end and have won! Congratulations.")
 else:
   print("You lose due to your inability to choose correctly.");
-####################################
-####################################
-####################################
+##################################################################################################################################################################
 
 #Day 4 Code
 
