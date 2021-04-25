@@ -41,6 +41,9 @@ print(f"The name of your band is: {userBandName}!");
 #5. Make sure the input cursor shows on a new line, see the example at:
 #   https://band-name-generator-end.appbrewery.repl.run/
 ####################################
+####################################
+####################################
+
 
 #Day 2 Code
 
@@ -106,6 +109,200 @@ print(f"The final bill was ${format(finalBill, ',.2f')}.\n")
 print(f"Tip was ${format(tip, ',.2f')}.\n")
 print(f"Each person owes ${format(eachPersonPays, ',.2f')}.\n")
 ####################################
+####################################
+####################################
 
+#Day 3 Code
 
-##################################
+####################################
+# 🚨 Don't change the code below 👇
+number = int(input("Which number do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+if number % 2 != 0:
+  print("This is an odd number");
+else:
+  print("This is an even number.");
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+userBMI = round(weight/(height*height));
+
+if userBMI <= 18.5:
+  print(f"Your BMI is {userBMI} and you are underweight.");
+elif userBMI > 18.5 and userBMI <= 25:
+  print(f"Your BMI is {userBMI} and you are at a normal weight.");
+elif userBMI > 25 and userBMI <= 30:
+  print(f"Your BMI is {userBMI} and you are slightly overweight.");
+elif userBMI > 30 and userBMI <= 35:
+  print(f"Your BMI is {userBMI} and you are obese.");
+elif userBMI > 35:
+  print(f"Your BMI is {userBMI} and you are clinically obese.");
+else:
+  print("Please check your inputs to receive a BMI within these ranges.")
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+year = int(input("Which year do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+divisibleByFour = year % 4;
+divisibleByOneHundred = year % 100;
+divisibleByFourHundred = year % 400;
+
+#accounts for years above 400 and below 400
+if divisibleByFour == 0:
+  if divisibleByOneHundred == 0:
+    if divisibleByFourHundred == 0:
+      print(f"You have entered in {year}, and that is a leap year.");
+    else:
+      print(f"You have entered in {year}, and that is not a leap year.");
+  else:
+   print(f"You have entered in {year}, and that is a leap year.");
+else:
+  print(f"You have entered in {year}, and that is not a leap year.");
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+
+print("S: $15 | M: $20 | L: &25")
+size = input("What size pizza do you want? S, M, or L ")
+
+print("S: +$2 | M/L: +$3")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+
+print("S/M/L: +$1")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+finalPrice = 0;
+newSize = size.lower();
+newAddPep = add_pepperoni.lower();
+newExCheese = extra_cheese.lower();
+
+if(newSize == 's'): finalPrice += 15;
+elif(newSize == 'm'): finalPrice += 20;
+elif(newSize == 'l'): finalPrice += 25;
+else: print("You did not choose a size of your pizza.");
+
+if(newAddPep == 'y' and newSize == 's'): finalPrice += 2;
+elif(newAddPep == 'y' and (newSize == 'm' or newSize == 'l')): finalPrice += 3;
+else: finalPrice += 0;
+
+if(newExCheese == 'y'): finalPrice += 1;
+else: finalPrice += 0;
+
+print(f"You chose a {newSize} pizza saying {newAddPep} to pepperonis and {newExCheese} to extra cheese.\n");
+
+print(f"Your total is ${finalPrice}");
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+nameOneLower = name1.lower();
+nameTwoLower = name2.lower();
+combinedNames = nameOneLower + nameTwoLower;
+
+def trueCounter(string):
+  trueCount = 0;
+  trueCount += string.count('t');
+  trueCount += string.count('r');
+  trueCount += string.count('u');
+  trueCount += string.count('e');
+  return trueCount;
+
+def loveCounter(string):
+  loveCount = 0;
+  loveCount += string.count('l');
+  loveCount += string.count('o');
+  loveCount += string.count('v');
+  loveCount += string.count('e');
+  return loveCount;
+
+#finalTrueCount = trueCounter(nameOneLower) + trueCounter(nameTwoLower);
+finalTrueCount = trueCounter(combinedNames) * 10;
+
+#finalLoveCount = loveCounter(nameOneLower) + loveCounter(nameTwoLower);
+finalLoveCount = loveCounter(combinedNames);
+
+loveScore = finalTrueCount + finalLoveCount;
+
+if(loveScore < 10 or loveScore > 90):
+  print(f"Your score is {loveScore}, you go together like coke and mentos.");
+elif(loveScore >= 40 and loveScore <= 50):
+  print(f"Your score is {loveScore}, you go alright together.");
+else:
+  print(f"Your score is {loveScore}.");
+####################################
+
+####################################
+print('''
+******************
+  .     '     ,
+    _________
+ _ /_|_____|_\ _
+   '. \   / .'
+     '.\ /.'
+       '.'
+******************
+''')
+print("Welcome to Treasure Island.");
+print("Your mission is to find the treasure.");
+
+gameOver = False;
+
+while(gameOver == False):
+  firstDirection = input("Do you want to go right or left? Choose wisely. Choose the road less traveled. ").lower();
+
+  if(firstDirection == "left" or firstDirection == "l"):
+    print("Good choice.\n");
+  else:
+    gameOver = True;
+    break;
+  
+  swimOrWait = input("Swim or wait? What would you like to do? swim or WAIT? ").lower();
+
+  if(swimOrWait == "wait"):
+    print("Why expend more energy, right?\n");
+  else:
+    gameOver = True;
+    break;
+  
+  chooseDoor = input("Choose a door, red, blue, yellow. ").lower();
+
+  if(chooseDoor == "yellow" or chooseDoor == "y"):
+    break;
+  else:
+    gameOver = True;
+    break;
+
+if(gameOver == False):
+  print("You made it to the end and have won! Congratulations.")
+else:
+  print("You lose due to your inability to choose correctly.");
+####################################
+
+#Day 4 Code
