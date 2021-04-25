@@ -304,5 +304,24 @@ if(gameOver == False):
 else:
   print("You lose due to your inability to choose correctly.");
 ####################################
+####################################
+####################################
 
 #Day 4 Code
+
+####################################
+#Write your code below this line 👇
+#Hint: Remember to import the random module first. 🎲
+
+import random;
+
+headsOrTails = random.randint(0, 1);
+
+if(headsOrTails == 0):
+  print("Tails");
+else:
+  print("Heads");
+####################################
+
+####################################
+
