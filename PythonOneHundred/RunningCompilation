@@ -1,0 +1,111 @@
+#Day 1 Code
+
+####################################
+#Write your code below this line 👇
+name = input("What is your name? ")
+print(len(name))
+
+# 🚨 Don't change the code below 👇
+a = input("a: ")
+b = input("b: ")
+# 🚨 Don't change the code above 👆
+####################################
+
+####################################
+#Write your code below this line 👇
+
+temp = a;
+a = b;
+b = temp;
+
+
+#Write your code above this line 👆
+# 🚨 Don't change the code below 👇
+print("a: " + a)
+print("b: " + b)
+####################################
+
+####################################
+#Band Name Generator
+#1. Create a greeting for your program.
+print("--------Welcome! Are you in need of a name for your band?--------\n");
+print("-----If so you came to the right place to get a recommendation!-----\n");
+#2. Ask the user for the city that they grew up in.
+userCity = input("What city did you grow up in? ");
+#3. Ask the user for the name of a pet.
+userPet = input("What is the name of your pet? ");
+#4. Combine the name of their city and pet and show them their band name.
+userBandName = userCity + " " + userPet;
+print(f"The name of your band is: {userBandName}!");
+
+#5. Make sure the input cursor shows on a new line, see the example at:
+#   https://band-name-generator-end.appbrewery.repl.run/
+####################################
+
+#Day 2 Code
+
+####################################
+# 🚨 Don't change the code below 👇
+twoDigitNumber = input("Type a two digit number: ")
+# 🚨 Don't change the code above 👆
+#Write your code below this line 👇
+
+twoDigitNumberInt = (int)(twoDigitNumber);
+onesPlace = twoDigitNumberInt % 10;
+tensPlace = (twoDigitNumberInt - onesPlace)/10;
+
+print(onesPlace + tensPlace);
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+heightFloat = (float)(height);
+weightFloat = (float)(weight);
+
+personBMI = weightFloat/(heightFloat*heightFloat);
+personBMIInt = (int)(personBMI);
+
+print(personBMIInt);
+##################################
+
+##################################
+# 🚨 Don't change the code below 👇
+age = input("What is your current age? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+untilNinety = 90 - (int)(age);
+daysLeft = untilNinety * 365;
+weeksLeft = untilNinety * 52;
+monthsLeft = untilNinety * 12;
+
+print(f"You have {daysLeft} days left, which is {weeksLeft} weeks left, which is {monthsLeft} months left.");
+####################################
+
+####################################
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+#Format the result to 2 decimal places = 33.60
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+#HINT 1: https://www.google.com/search?q=how+to+round+number+to+2+decimal+places+python&oq=how+to+round+number+to+2+decimal
+#HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
+
+finalBill = 150.00;
+tip = 150 * 0.12;
+eachPersonPays = (finalBill + tip) / 5
+
+
+print(f"The final bill was ${format(finalBill, ',.2f')}.\n")
+print(f"Tip was ${format(tip, ',.2f')}.\n")
+print(f"Each person owes ${format(eachPersonPays, ',.2f')}.\n")
+####################################
+
+
+##################################
