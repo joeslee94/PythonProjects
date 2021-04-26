@@ -394,24 +394,28 @@ scissors = '''
 
 choicesList = [rock, paper, scissors];
 computerChoice = random.choice(choicesList);
+
 userChoiceNum = int(input("Choose rock(0), paper(1), or scissors(2): "));
-userChoice = choicesList[userChoiceNum];
+if(userChoiceNum > 2):
+  print("Invalid input, you lose by default");
+else:
+  userChoice = choicesList[userChoiceNum];
 
-print(f"The computer chose {computerChoice}.");
-print(f"You chose {userChoice}");
+  print(f"The computer chose {computerChoice}.");
+  print(f"You chose {userChoice}");
 
-if(computerChoice == userChoice):
-  print("It was a draw.");
-if(computerChoice == rock and userChoice == scissors):
-  print("You lose.");
-if(computerChoice == rock and userChoice == paper):
-  print("You win");
-if(computerChoice == paper and userChoice == rock):
-  print("You lose.");
-if(computerChoice == paper and userChoice == scissors):
-  print("You win");
-if(computerChoice == scissors and userChoice == paper):
-  print("You lose.");
-if(computerChoice == scissors and userChoice == rock):
-  print("You win");
+  if(computerChoice == userChoice):
+    print("It was a draw.");
+  if(computerChoice == rock and userChoice == scissors):
+    print("You lose.");
+  if(computerChoice == rock and userChoice == paper):
+    print("You win");
+  if(computerChoice == paper and userChoice == rock):
+    print("You lose.");
+  if(computerChoice == paper and userChoice == scissors):
+    print("You win");
+  if(computerChoice == scissors and userChoice == paper):
+    print("You lose.");
+  if(computerChoice == scissors and userChoice == rock):
+    print("You win");
 ##################################################################################################################################################################
