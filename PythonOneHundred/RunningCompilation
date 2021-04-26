@@ -396,7 +396,7 @@ choicesList = [rock, paper, scissors];
 computerChoice = random.choice(choicesList);
 
 userChoiceNum = int(input("Choose rock(0), paper(1), or scissors(2): "));
-if(userChoiceNum > 2):
+if(userChoiceNum > 2 or userChoiceNum < 0):
   print("Invalid input, you lose by default");
 else:
   userChoice = choicesList[userChoiceNum];
