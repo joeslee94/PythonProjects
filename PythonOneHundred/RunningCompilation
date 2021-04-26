@@ -316,4 +316,102 @@ else:
 ####################################
 
 ####################################
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
 
+#Write your code below this line 👇
+
+import random;
+
+numberOfNames = len(names);
+whoWillPay = random.randint(0, numberOfNames-1);
+personPaying = names[whoWillPay];
+
+print(f"{personPaying} is paying today.");
+####################################
+
+####################################
+# 🚨 Don't change the code below 👇
+row1 = ["️0️","️0️","️0️"]
+row2 = ["0","0","0"]
+row3 = ["0","0","0"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+positionInt = int(position);
+row = int(positionInt % 10);
+column = int(positionInt/10) - 1;
+
+if(row == 1):
+  row1[column] = "X";
+elif(row == 2):
+  row2[column] = "X";
+elif(row == 3):
+  row3[column] = "X";
+else:
+  print("You have inputted an invalid position.")
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+####################################
+
+####################################
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+choicesList = [rock, paper, scissors];
+computerChoice = random.choice(choicesList);
+userChoiceNum = int(input("Choose rock(0), paper(1), or scissors(2): "));
+userChoice = choicesList[userChoiceNum];
+
+print(f"The computer chose {computerChoice}.");
+print(f"You chose {userChoice}");
+
+if(computerChoice == userChoice):
+  print("It was a draw.");
+if(computerChoice == rock and userChoice == scissors):
+  print("You lose.");
+if(computerChoice == rock and userChoice == paper):
+  print("You win");
+if(computerChoice == paper and userChoice == rock):
+  print("You lose.");
+if(computerChoice == paper and userChoice == scissors):
+  print("You win");
+if(computerChoice == scissors and userChoice == paper):
+  print("You lose.");
+if(computerChoice == scissors and userChoice == rock):
+  print("You win");
+##################################################################################################################################################################
