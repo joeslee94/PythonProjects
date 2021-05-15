@@ -586,3 +586,63 @@ while not end_of_game:
     print(hangman_art.stages[lives])
 
 ##################################################################################################################################################################
+
+#Day 8 Code
+
+####################################
+
+# Review: 
+# Create a function called greet(). 
+# Write 3 print statements inside the function.
+# Call the greet() function and run your code.
+
+def greet(name):
+  print(f"Hello {name}.");
+  print("How are you doing?");
+  print(f"Have a good rest of the day {name}.");
+
+name = input("What is your name? ");
+greet(name);
+
+####################################
+
+####################################
+
+def upgradeGreet(name, location, mood):
+  print(f"Hello {name}.");
+  print(f"How is the weather in {location}?");
+  print(f"Glad to hear you are feeling {mood}!");
+
+name = input("What is your name? ");
+location = input("Where are you currently? ");
+mood = input("How are you feeling? ");
+
+upgradeGreet(name, location, mood);
+
+####################################
+
+####################################
+
+import math
+
+#Write your code below this line 👇
+def paint_calc(height, width, cover):
+  paintCans = math.ceil((height * width)/cover);
+  print(f"You will need {paintCans} of paint.")
+
+#Write your code above this line 👆
+# Define a function called paint_calc() so that the code below works.   
+
+# 🚨 Don't change the code below 👇
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+####################################
+
+####################################
+
+
+
+####################################
