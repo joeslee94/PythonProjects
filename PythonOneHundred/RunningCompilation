@@ -643,6 +643,66 @@ paint_calc(height=test_h, width=test_w, cover=coverage)
 
 ####################################
 
+import math
+#Write your code below this line 👇
 
+def primeChecker(number):
+  if(number == 2 or number == 3):
+    print(f"The number {number} is prime.")
+  elif((number-1) % 6 == 0 or (number+1) % 6 == 0):
+    print(f"The number {number} is prime.")
+  else:
+    print(f"The number {number} is not prime.")
+
+#Write your code above this line 👆
+    
+#Do NOT change any of the code below👇
+n = int(input("Check this number: "))
+primeChecker(n)
+
+####################################
+
+####################################
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+def encode(text, shift):
+  newText = [];
+
+  for letter in text:
+    if(alphabet.index(letter) <= (25 - shift)):
+      newText.append(chr(ord(letter) + shift));
+    else:
+      initialPos = alphabet.index(letter);
+      initialPos = initialPos - 26 + shift;
+      newText.append(alphabet[initialPos]);
+
+  newString = ''.join(newText);
+  print(f"Your encoded string is {newString}");
+
+def decode(text, shift):
+  newText = [];
+
+  for letter in text:
+    if(alphabet.index(letter) - shift >= 0):
+      newText.append(chr(ord(letter) - shift));
+    else:
+      initialPos = alphabet.index(letter);
+      initialPos = initialPos - shift + 26;
+      newText.append(alphabet[initialPos]);
+
+  newString = ''.join(newText);
+  print(f"Your decoded string is {newString}");
+
+if(direction == 'encode'):
+  encode(text, shift);
+elif(direction == 'decode'):
+  decode(text, shift);
+else:
+  print("You did not enter in a valid choice");
 
 ####################################
